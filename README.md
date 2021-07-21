@@ -3,4 +3,4 @@
 
 
 - from now on,
-  most activities are work for Dolchul ~
+  most activities work as Dolchul
