@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<title>MSDC : Maple Story Damage Calculater</title>
+</head>
+<body>
+	<div class="center">
+		<br>
+		<span style="color:#92B3B7"><h1>LogDMG</h1></span>
+		<form method="post">
+
+			<div class="txt_field">
+				<input type="number" step="0.0000000000001" required id="v1">
+				<span></span>
+				<label>C</label>
+			</div>
+
+			<div class="txt_field">
+				<input type="number" step="0.0000000000001" required id="v2">
+				<span></span>
+				<label>Major stat : 주스텟</label>
+			</div>
+
+      <div class="txt_field">
+        <input type="number" step="0.0000000000001" required id="v3">
+				<span></span><span></span>
+        <label>Minor stat : 부스텟</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="number" step="0.0000000000001" required id="v4">
+				<span></span>
+        <label>Sp :공격력</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="number" step="0.0000000000001" required id="v5">
+				<span></span>
+        <label>Sp+ : 공격력증가</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="number" step="0.0000000000001" required id="v6">
+				<span></span>
+        <label>Dmg+ : 데미지증가</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="number" step="0.0000000000001" required id="v7">
+				<span></span>
+        <label>Boss-Dmg : 보스 데미지증가</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="number" step="0.0000000000001" required id="v8">
+				<span></span>
+        <label>Dpr : 방어율</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="number" step="0.0000000000001" required id="v9">
+				<span></span>
+        <label>Dp-dcs-r : 방어율 무시</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="number" step="0.0000000000001" required id="v10">
+				<span></span>
+        <label>Critical Dmg : 크리티컬 데미지</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="number" step="0.0000000000001" required id="v11">
+				<span></span>
+        <label>Final Dmg : 최종데미지</label>
+      </div>
+
+			<input type="button" onclick="calcul();" value="Calculate" />
+			<br>
+			<br>
+			<span id="result"></span>
+			<script>
+			function calcul() {
+				var result = document.getElementById("result");
+				var v1 = document.getElementById("v1").value;
+				var v2 = document.getElementById("v2").value;
+				var v3 = document.getElementById("v3").value;
+				var v4 = document.getElementById("v4").value;
+				var v5 = document.getElementById("v5").value;
+				var v6 = document.getElementById("v6").value;
+				var v7 = document.getElementById("v7").value;
+				var v8 = document.getElementById("v8").value;
+				var v9 = document.getElementById("v9").value;
+				var v10 = document.getElementById("v10").value;
+				var v11 = document.getElementById("v11").value;
+				result.textContent = Number(v1)*(4*Number(v2)+Number(v3))*(Number(v4)*(1+Number(v5)/100))*(1+Number(v6)/100+Number(v7)/100)*(1-(Number(v8)/(99+1)*(1-Number(v9)/100)))*(1.35+Number(v10)/100)*(1+Number(v11)/100);
+			}
+			</script>
+		<br>
+		<br>
+		<br>
+		</form>
+	</div>
+	<br>
+	<br>
+	<br>
+</body>
+</html>
