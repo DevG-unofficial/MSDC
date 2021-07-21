@@ -9,11 +9,11 @@ body{
   margin: 3%;
   padding: 0;
   background: linear-gradient(120deg,#80ff72, #7ee8fa);
-  height: 150vh;
+  height: 130vh;
 }
 .center{
   position: absolute;
-  top: 80%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
